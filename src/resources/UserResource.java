@@ -20,11 +20,6 @@ public class UserResource implements BaseCRUDResource<UserBean> {
     @Override
     public APIResponse update(UserBean newBean) {
         boolean ok = DB.updateUser(newBean);
-        if (!ok) {
-            System.out.println("User update failed!");
-        } else {
-            System.out.println(newBean);
-        }
         return !ok ? new APIResponse(400, "User updated failed!", null) : new APIResponse(200, "User successfully updated", newBean);
     }
 
