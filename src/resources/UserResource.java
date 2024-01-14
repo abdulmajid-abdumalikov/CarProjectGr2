@@ -28,4 +28,10 @@ public class UserResource implements BaseCRUDResource<UserBean> {
         boolean ok = DB.deleteUser(ID);
         return !ok ? new APIResponse(400, "User delete failed!", false) : new APIResponse(200, "User has been successfully deleted!", true);
     }
+
+    // Use Main class
+    public APIResponse login(UserBean user) {
+        UserBean userBean = DB.getLogin(user.getUsername(), user.getPassword());
+        return userBean == null ? new APIResponse(400, "Error!", null) : new APIResponse(200, "Success!", userBean);
+    }
 }

@@ -8,7 +8,7 @@ import db.DB;
 public class CarResource implements BaseCRUDResource<CarBean> {
     @Override
     public APIResponse add(CarBean bean) {
-        CarBean newCar = DB.addCar(bean);
+        Integer newCar = DB.addCar(bean);
         return newCar == null ? new APIResponse(400, "Car already exists", null) : new APIResponse(200, "Successfully added", newCar);
     }
 
@@ -26,7 +26,7 @@ public class CarResource implements BaseCRUDResource<CarBean> {
 
     @Override
     public APIResponse delete(Integer ID) {
-        boolean ok = DB.deleteUser(ID);
+        boolean ok = DB.deleteCar(ID);
         return !ok ? new APIResponse(400, "Car delete failed!", false) : new APIResponse(200, "Car has been successfully deleted!", true);
     }
 }
