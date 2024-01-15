@@ -60,13 +60,6 @@ public class CarBean extends BaseIDBean {
 
     @Override
     public String toString() {
-        return "CarBean{" +
-                "ID= " + getID() +
-                ", name='" + name + '\'' +
-                ", color='" + color + '\'' +
-                ", price=" + price +
-                ", isInStore=" + isInStore +
-                ", userID=" + userID +
-                '}';
+        return STR."CarBean{ID= \{getID()}, name='\{name}\{'\''}, color='\{color}\{'\''}, price=\{price}, isInStore=\{isInStore}, userID=\{userID}\{'}'}";
     }
 }

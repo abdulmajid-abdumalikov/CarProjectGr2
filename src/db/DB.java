@@ -83,4 +83,12 @@ public class DB {
         }
         return cars.removeIf(car -> car.getID().equals(id));
     }
+
+
+    public static List<CarBean> getCars() {
+        return cars;
+    }
+    public static List<UserBean> getUsers() {
+        return users;
+    }
 }

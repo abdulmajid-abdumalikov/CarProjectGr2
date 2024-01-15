@@ -207,7 +207,7 @@ public class Main {
 
     private static void buyCar() {
 
-        CarResource resource = new CarResource();
+//        CarResource resource = new CarResource();
 
         for (CarBean car : DB.getCars()) {
             if (car.getInStore() && !Objects.equals(car.getUserID(), DB.session.getID())) {
