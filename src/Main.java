@@ -32,7 +32,7 @@ public class Main {
             System.out.println("4. Show my cars");
             System.out.println("5. Put my car to store");
             System.out.println("6. Buy car");
-            System.out.println("7. Check balance");
+            System.out.println("7. Check balancee");
             System.out.println("8. Log out");
         }
 
